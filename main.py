@@ -1,9 +1,9 @@
 import firebase_admin
 from firebase_admin import credentials, db
 import time
-cred = credentials.Certificate("path/to/your/credentials.json")
+cred = credentials.Certificate("path/to/your/credentials.json") #CHANGE THIS TO YOUR CREDS JSON FILE
 firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://yourdatabase-default-rtdb.firebaseio.com/'
+    'databaseURL': 'https://yourdatabase-default-rtdb.firebaseio.com/' #CHANGE THIS TO YOUR DATABASE URL
 })
 ref = db.reference('/chat')
 def listen_for_messages():
